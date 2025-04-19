@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Educonnect Solutions</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    .contact-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .contact-box {
+      background-color: #ffffff;
+      border: 2px solid #0d47a1;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .contact-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+    }
+
+    .contact-box i {
+      font-size: 30px;
+      color: #0d47a1;
+      margin-bottom: 10px;
+    }
+
+    .contact-box h3 {
+      margin: 10px 0 5px;
+      color: #0d47a1;
+    }
+
+    .contact-box p, .contact-box a {
+      margin: 0;
+      font-size: 16px;
+      text-decoration: none;
+    }
+
+    .blue-text {
+      color: #0d47a1;
+    }
+
+    .whatsapp-button {
+      display: inline-block;
+      margin: 30px auto 0;
+      background-color: #25D366;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .whatsapp-button:hover {
+      background-color: #1ebe5d;
+    }
+
+    .whatsapp-button i {
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-area">
+      <img src="logo.png" alt="Logo" />
+      <h1>Educonnect Solutions</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="inquiry.html">Inquiry</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="office-section" id="office">
+    <h2>Our Office</h2>
+
+    <div class="contact-container">
+      <div class="contact-box">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>Office</h3>
+        <p class="blue-text">Prem Nagar, Balaghat, Madhya Pradesh</p>
+      </div>
+
+      <div class="contact-box">
+        <i class="fas fa-clock"></i>
+        <h3>Working Hours</h3>
+        <p class="blue-text">Monday to Saturday — 10:00 AM to 6:00 PM</p>
+      </div>
+
+      <div class="contact-box">
+        <i class="fas fa-user"></i>
+        <h3>Mr. Faiz Khan</h3>
+        <p><a class="blue-text" href="tel:+917049549149">+91 70495 49149</a></p>
+      </div>
+
+      <div class="contact-box">
+        <i class="fas fa-user"></i>
+        <h3>Mr. Ayaz Ali</h3>
+        <p><a class="blue-text" href="tel:+917771914834">+91 77719 14834</a></p>
+      </div>
+
+      <div class="contact-box">
+        <i class="fas fa-user"></i>
+        <h3>Ganesh Burde</h3>
+        <p><a class="blue-text" href="tel:+916267448210">+91 62674 48210</a></p>
+      </div>
+
+      <div class="contact-box">
+        <i class="fas fa-user"></i>
+        <h3>Mr. Rameshwar Jhariya</h3>
+        <p><a class="blue-text" href="tel:+917354513191">+91 73545 13191</a></p>
+      </div>
+    </div>
+
+    <p><strong>Email:</strong> <a href="mailto:educonnectsolutions123@gmail.com">educonnectsolutions123@gmail.com</a></p>
+
+    <a class="whatsapp-button" href="https://wa.me/917049549149" target="_blank">
+      <i class="fab fa-whatsapp"></i> Chat with us on WhatsApp
+    </a>
+  </section>
+
+  <footer>
+    <p>© 2025 Educonnect Solutions | Balaghat, MP</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inquiry Form - Educonnect Solutions</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      padding: 20px;
+      background-color: #f3f3f3;
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #5e35b1;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 0.7rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      width: 100%;
+      padding: 0.8rem;
+      background-color: #5e35b1;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #4527a0;
+    }
+  </style>
+</head>
+<body>
+<header><div class="logo-area">
+
+      <img src="logo.png" alt="Logo" />
+
+      <h1>Educonnect Solutions</h1>
+    </div></header>
+ <form action="https://formspree.io/f/mpwpgjlj" method="POST">
+    <h2>Inquiry Form</h2>
+
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+
+    <label for="role">Your Role</label>
+    <select id="role" name="role" required>
+      <option value="">-- Select Role --</option>
+      <option value="Principal">Principal</option>
+      <option value="Management">Management</option>
+      <option value="Accountant">Accountant</option>
+      <option value="Computer Operator">Computer Operator</option>
+      <option value="Teacher">Teacher</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label for="school">School Name</label>
+    <input type="text" id="school" name="school" placeholder="Enter school name" required />
+
+    <label for="ward">Ward Number</label>
+    <input type="text" id="ward" name="ward" placeholder="Enter ward number" />
+
+    <label for="street">Street Name</label>
+    <input type="text" id="street" name="street" placeholder="Enter street name" />
+
+    <label for="pincode">Pin Code</label>
+    <input type="text" id="pincode" name="pincode" placeholder="Enter pin code" />
+
+    <label for="mobile">Mobile Number</label>
+    <input type="tel" id="mobile" name="mobile" placeholder="Enter 10-digit mobile number" required />
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" placeholder="Enter email (optional)" />
+
+    <label for="district">District</label>
+    <select id="district" name="district" required onchange="updateTehsils()">
+      <option value="">-- Select District --</option>
+      <!-- Madhya Pradesh Districts -->
+      <option value="Bhopal">Bhopal</option>
+      <option value="Indore">Indore</option>
+      <option value="Jabalpur">Jabalpur</option>
+      <option value="Gwalior">Gwalior</option>
+      <option value="Ujjain">Ujjain</option>
+      <option value="Balaghat">Balaghat</option>
+      <option value="Rewa">Rewa</option>
+      <option value="Satna">Satna</option>
+      <option value="Sagar">Sagar</option>
+      <option value="Neemuch">Neemuch</option>
+      <option value="Mandsaur">Mandsaur</option>
+      <option value="Raisen">Raisen</option>
+      <option value="Sehore">Sehore</option>
+      <option value="Vidisha">Vidisha</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label for="tehsil">Subdivision / Block</label>
+    <select id="tehsil" name="tehsil" required>
+      <option value="">-- Select Subdivision --</option>
+    </select>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="4" placeholder="Write your message here..."></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    const districtTehsilMap = {
+      "Bhopal": ["Huzur", "Berasia", "Other"],
+      "Indore": ["Indore", "Depalpur", "Sanwer", "Other"],
+      "Jabalpur": ["Jabalpur", "Sihora", "Patan", "Panagar", "Other"],
+      "Gwalior": ["Gwalior", "Dabra", "Bhitarwar", "Other"],
+      "Ujjain": ["Ujjain", "Badnagar", "Ghatiya", "Khachrod", "Other"],
+      "Balaghat": ["Balaghat", "Waraseoni","Lalbarra", "Katangi", "Baihar", "Lanji", "Other"],
+      "Rewa": ["Rewa", "Teonthar", "Mauganj", "Other"],
+      "Satna": ["Satna", "Nagod", "Rampur Baghelan", "Maihar", "Other"],
+      "Sagar": ["Sagar", "Deori", "Shahgarh", "Rehli", "Other"],
+      "Neemuch": ["Neemuch", "Manasa", "Jawad", "Other"],
+      "Mandsaur": ["Mandsaur", "Malhargarh", "Sitamau", "Other"],
+      "Raisen": ["Raisen", "Begumganj", "Goharganj", "Bareli", "Other"],
+      "Sehore": ["Sehore", "Nasrullaganj", "Ashta", "Other"],
+      "Vidisha": ["Vidisha", "Basoda", "Lateri", "Other"],
+      "Other": ["Other"],
+    };
+
+    const districtSelect = document.getElementById('district');
+    const tehsilSelect = document.getElementById('tehsil');
+
+    // Function to update tehsils based on district selection
+    function updateTehsils() {
+      const selectedDistrict = districtSelect.value;
+      const tehsils = districtTehsilMap[selectedDistrict] || [];
+
+      tehsilSelect.innerHTML = '<option value="">-- Select Subdivision --</option>';
+      tehsils.forEach(tehsil => {
+        const opt = document.createElement('option');
+        opt.value = tehsil;
+        opt.textContent = tehsil;
+        tehsilSelect.appendChild(opt);
+      });
+    }
+  </script>
+
+</body>
+</html>
