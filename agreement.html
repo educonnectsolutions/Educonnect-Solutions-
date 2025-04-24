@@ -5,104 +5,111 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Agreement Form | EduConnect Solutions</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .container { max-width: 800px; margin: auto; padding: 20px; background: #fff; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);}
-    h2, h3 { text-align: center; }
-    label { display: block; margin-top: 10px; font-weight: bold; }
-    input, textarea, select {
-      width: 100%; padding: 8px; margin-top: 4px;
-      border: 1px solid #ccc; border-radius: 6px;
-    }
-    .submit-btn {
-      background-color: #007BFF; color: #fff;
-      border: none; padding: 10px 20px;
-      border-radius: 6px; margin-top: 15px;
-      cursor: pointer;
-    }
-    .terms-box {
-      background: #f9f9f9;
-      padding: 15px;
-      border-radius: 8px;
-      margin-top: 20px;
-      font-size: 15px;
-    }
-    .waiting-box {
-      margin-top: 20px;
-      background: #e3f2fd;
-      padding: 15px;
-      border-radius: 8px;
-      display: none;
-      text-align: center;
-    }
-  </style>
 </head>
 <body>
-  <div class="container">
-    <h2>EduConnect Solutions</h2>
-    <h3>Agreement Form (Academic Year 2025–2026)</h3>
+  <header class="header">
+    <nav>
+      <a href="index.html" class="logo">EduConnect Solutions</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="agreement.html" class="active">Agreement</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <form id="agreementForm" onsubmit="showWaiting(); return false;">
-      <label>School Name</label>
-      <input type="text" required />
+  <section class="main-section">
+    <div class="container">
+      <h2 class="section-title">Agreement Form (Academic Year 2025–2026)</h2>
 
-      <label>School Address</label>
-      <textarea required></textarea>
+      <form id="agreementForm" onsubmit="showWaiting(); return false;">
+        <div class="form-group">
+          <label>School Name</label>
+          <input type="text" required />
+        </div>
 
-      <label>District</label>
-      <input type="text" required />
+        <div class="form-group">
+          <label>School Address</label>
+          <textarea required></textarea>
+        </div>
 
-      <label>Block</label>
-      <input type="text" required />
+        <div class="form-group">
+          <label>District</label>
+          <input type="text" required />
+        </div>
 
-      <label>BRC Office</label>
-      <input type="text" required />
+        <div class="form-group">
+          <label>Block</label>
+          <input type="text" required />
+        </div>
 
-      <label>DISE Code</label>
-      <input type="text" required />
+        <div class="form-group">
+          <label>BRC Office</label>
+          <input type="text" required />
+        </div>
 
-      <label>Email</label>
-      <input type="email" required />
+        <div class="form-group">
+          <label>DISE Code</label>
+          <input type="text" required />
+        </div>
 
-      <label>Contact Number</label>
-      <input type="tel" required />
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" required />
+        </div>
 
-      <label>Total Students</label>
-      <input type="number" required />
+        <div class="form-group">
+          <label>Contact Number</label>
+          <input type="tel" required />
+        </div>
 
-      <label>Charges Type</label>
-      <select required>
-        <option value="">Select</option>
-        <option value="monthly_per_student">Monthly Per Student</option>
-        <option value="monthly_per_school">Monthly Per School</option>
-      </select>
+        <div class="form-group">
+          <label>Total Students</label>
+          <input type="number" required />
+        </div>
 
-      <label>Proposed Amount (₹)</label>
-      <input type="number" required />
+        <div class="form-group">
+          <label>Charges Type</label>
+          <select required>
+            <option value="">Select</option>
+            <option value="monthly_per_student">Monthly Per Student</option>
+            <option value="monthly_per_school">Monthly Per School</option>
+          </select>
+        </div>
 
-      <div class="terms-box">
-        <h4>Terms and Conditions</h4>
-        <ul>
-          <li>यह अनुबंध शैक्षणिक सत्र 2025–2026 के लिए मान्य रहेगा।</li>
-          <li>एकेडमिक वर्ष पूर्ण होते ही अनुबंध समाप्त हो जाएगा।</li>
-          <li>शुल्क का भुगतान हर माह की 5 तारीख तक करना अनिवार्य होगा।</li>
-          <li>सेवाओं का दुरुपयोग अनुबंध समाप्ति का कारण बन सकता है।</li>
-          <li>EduConnect Solutions द्वारा सभी सेवाएं ऑनलाइन माध्यम से दी जाएंगी।</li>
-          <li>डेटा गोपनीयता का पालन किया जाएगा।</li>
-          <li>आपातकालीन सेवा के लिए अलग शुल्क हो सकता है।</li>
-          <li>समस्या आने पर स्कूल को तुरंत एडमिन से संपर्क करना होगा।</li>
-        </ul>
-        <small><i>इन नियमों को एडमिन द्वारा एडिट किया जा सकता है।</i></small>
+        <div class="form-group">
+          <label>Proposed Amount (₹)</label>
+          <input type="number" required />
+        </div>
+
+        <div class="form-group">
+          <h3>Terms and Conditions</h3>
+          <ul class="terms">
+            <li>यह अनुबंध शैक्षणिक सत्र 2025–2026 के लिए मान्य रहेगा।</li>
+            <li>एकेडमिक वर्ष पूर्ण होते ही अनुबंध समाप्त हो जाएगा।</li>
+            <li>शुल्क का भुगतान हर माह की 5 तारीख तक करना अनिवार्य होगा।</li>
+            <li>सेवाओं का दुरुपयोग अनुबंध समाप्ति का कारण बन सकता है।</li>
+            <li>EduConnect Solutions द्वारा सभी सेवाएं ऑनलाइन माध्यम से दी जाएंगी।</li>
+            <li>डेटा गोपनीयता का पालन किया जाएगा।</li>
+            <li>आपातकालीन सेवा के लिए अलग शुल्क हो सकता है।</li>
+            <li>समस्या आने पर स्कूल को तुरंत एडमिन से संपर्क करना होगा।</li>
+          </ul>
+        </div>
+
+        <button type="submit" class="btn">Submit Agreement</button>
+      </form>
+
+      <div id="waitingMsg" class="success-box" style="display:none;">
+        <h3>Thank you!</h3>
+        <p>Your agreement request has been submitted.<br>
+        Waiting for admin approval.</p>
       </div>
-
-      <button type="submit" class="submit-btn">Submit Agreement</button>
-    </form>
-
-    <div class="waiting-box" id="waitingMsg">
-      <h4>Thank you!</h4>
-      <p>Your agreement request has been submitted.<br/>
-      Please wait for Admin approval.</p>
     </div>
-  </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 EduConnect Solutions. All rights reserved.</p>
+  </footer>
 
   <script>
     function showWaiting() {
