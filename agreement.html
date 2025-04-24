@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agreement Form | EduConnect Solutions</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header (Same as existing site) -->
+  <header>
+    <div class="container">
+      <h1>EduConnect Solutions</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="enquiry.html">Enquiry</a></li>
+          <li><a class="active" href="agreement.html">Agreement</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Agreement Form Section -->
+  <section class="content">
+    <div class="container">
+      <h2>School Agreement Registration Form</h2>
+      <form class="form">
+        <label>School Name:</label>
+        <input type="text" required />
+
+        <label>School Address:</label>
+        <textarea required></textarea>
+
+        <label>District:</label>
+        <input type="text" required />
+
+        <label>Block:</label>
+        <input type="text" required />
+
+        <label>BRC Office:</label>
+        <input type="text" />
+
+        <label>DISE Code:</label>
+        <input type="text" required />
+
+        <label>Contact Person Name:</label>
+        <input type="text" required />
+
+        <label>Mobile Number:</label>
+        <input type="tel" required />
+
+        <label>Email ID:</label>
+        <input type="email" />
+
+        <label>Total Students:</label>
+        <input type="number" required />
+
+        <label>Payment Mode:</label>
+        <select required>
+          <option value="">-- Select Mode --</option>
+          <option value="per_student">Monthly Per Student</option>
+          <option value="per_school">Monthly Total (Per School)</option>
+        </select>
+
+        <label>Upload Stamp/Signature (Optional):</label>
+        <input type="file" accept="image/*,application/pdf" />
+
+        <label>
+          <input type="checkbox" required />
+          I agree to the terms and conditions for the 2025–2026 academic year.
+        </label>
+
+        <button type="submit">Submit Agreement</button>
+        <p class="note">Note: Once submitted, your request will be reviewed by Admin.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer (Same as existing site) -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 EduConnect Solutions. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
