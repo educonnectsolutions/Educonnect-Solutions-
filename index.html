@@ -5,24 +5,117 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Educonnect Solutions - Home</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Header layout */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #f5f5f5;
+      flex-wrap: wrap;
+    }
+
+    .left-header, .right-header {
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+
+    .left-header a, .right-header a {
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    .back-button {
+      background-color: #ccc;
+      color: #000;
+    }
+
+    .login-button {
+      background-color: #4CAF50;
+      color: white;
+      margin-left: auto;
+    }
+
+    .logo-area {
+      text-align: center;
+      flex: 2;
+    }
+
+    .logo-area img {
+      height: 40px;
+      vertical-align: middle;
+    }
+
+    .logo-area h1 {
+      display: inline;
+      font-size: 20px;
+      margin-left: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 10px 0 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      .logo-area h1 {
+        display: block;
+        margin-top: 5px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .right-header {
+        justify-content: flex-end;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <div class="logo-area">
-        <img src="logo.png" alt="Logo" />
-        <h1>Educonnect Solutions</h1>
+    <div class="left-header">
+      <a href="javascript:history.back()" class="back-button">← Back</a>
     </div>
-    <nav>
-       <ul><li> <a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-       <li> <a href="inquiry.html">Inquiry</a></li>
-       <li> <a href="contact.html">Contact</a></li><li><a href="agreement.html">Agreement</a></li>
-<li><a href="login.html">Login</a></li>
-</ul>
-    </nav>
-</header>
 
+    <div class="logo-area">
+      <img src="logo.png" alt="Logo" />
+      <h1>Educonnect Solutions</h1>
+    </div>
+
+    <div class="right-header">
+      <a href="login.html" class="login-button">Login</a>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="inquiry.html">Inquiry</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="agreement.html">Agreement</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <section class="hero">
     <h2>Welcome to Educonnect Solutions</h2>
@@ -39,77 +132,76 @@
         Every financial year, we take responsibility for official school-related tenders issued through the BRC (Block Resource Centre) offices. If your school falls under any such BRC jurisdiction, we ensure that all the required services for your school are handled professionally and completed before the deadline. Our commitment lies in delivering quality service with complete accountability.
       </p>
       <p>
-        We also assure the complete protection of student, parent, and staff data. At Educonnect Solutions, maintaining confidentiality and data privacy is a top priority�no sensitive information is ever disclosed or shared.
+        We also assure the complete protection of student, parent, and staff data. At Educonnect Solutions, maintaining confidentiality and data privacy is a top priority—no sensitive information is ever disclosed or shared.
       </p>
     </div>
   </section>
 
-<section id="services-info">
-  <div class="content-container">
-    <h2>Our Work</h2>
-    <p>
-      Educonnect Solutions offers a comprehensive suite of services designed to simplify and support every aspect of school and educational administration.
-    </p>
-    <div class="services-grid">
-      <a href="services.html" class="service-box">
-        <h3>Education Portal 3.0</h3>
-        <p>Efficiently manage and update all school-related data with precision.</p>
-      </a>
-      <a href="services.html" class="service-box">
-        <h3>RTE Portal Management</h3>
-        <p>Seamless registration and tracking of RTE students as per government norms.</p>
-      </a>
-      <a href="services.html" class="service-box">
-        <h3>Teacher Services</h3>
-        <p>Support with teacher onboarding, leave applications, and profile updates.</p>
-      </a>
-      <a href="services.html" class="service-box">
-        <h3>Transfer & Promotion</h3>
-        <p>End-to-end assistance for staff transfer requests and promotion cases.</p>
-      </a>
-      <a href="services.html" class="service-box">
-        <h3>School Login & Staff Data</h3>
-        <p>Setup and troubleshooting of login credentials and employee data handling.</p>
-      </a>
-      <a href="services.html" class="service-box">
-        <h3>Enrollment Management</h3>
-        <p>Support for student admissions and enrollment records.</p>
-      </a>
-      <a href="services.html" class="service-box">
-        <h3>Scholarship Assistance</h3>
-        <p>Form filling, document upload, and verification guidance.</p>
-      </a>
-      <a href="services.html" class="service-box">
-        <h3>Samagra & Aadhaar</h3>
-        <p>Linking and correcting student data accurately.</p>
-      </a>
-      <a href="services.html" class="service-box">
-        <h3>School Registration</h3>
-        <p>Support for school registration and timely renewals.</p>
-      </a>
-      <a href="services.html" class="service-box">
-        <h3>Technical Guidance</h3>
-        <p>Expert help for resolving portal-related issues.</p>
-      </a>
-      <a href="services.html" class="service-box">
-        <h3>CBSE Portal</h3>
-        <p>Help with LOC, registrations, and board updates.</p>
-      </a>
-      <a href="services.html" class="service-box">
-        <h3>OASIS Portal</h3>
-        <p>Manage school and staff data for OASIS accurately.</p>
-      </a>
-      <a href="services.html" class="service-box">
-        <h3>Saras 6.0</h3>
-        <p>End-to-end help with SARAS affiliation portal.</p>
-      </a>
+  <section id="services-info">
+    <div class="content-container">
+      <h2>Our Work</h2>
+      <p>
+        Educonnect Solutions offers a comprehensive suite of services designed to simplify and support every aspect of school and educational administration.
+      </p>
+      <div class="services-grid">
+        <a href="services.html" class="service-box">
+          <h3>Education Portal 3.0</h3>
+          <p>Efficiently manage and update all school-related data with precision.</p>
+        </a>
+        <a href="services.html" class="service-box">
+          <h3>RTE Portal Management</h3>
+          <p>Seamless registration and tracking of RTE students as per government norms.</p>
+        </a>
+        <a href="services.html" class="service-box">
+          <h3>Teacher Services</h3>
+          <p>Support with teacher onboarding, leave applications, and profile updates.</p>
+        </a>
+        <a href="services.html" class="service-box">
+          <h3>Transfer & Promotion</h3>
+          <p>End-to-end assistance for staff transfer requests and promotion cases.</p>
+        </a>
+        <a href="services.html" class="service-box">
+          <h3>School Login & Staff Data</h3>
+          <p>Setup and troubleshooting of login credentials and employee data handling.</p>
+        </a>
+        <a href="services.html" class="service-box">
+          <h3>Enrollment Management</h3>
+          <p>Support for student admissions and enrollment records.</p>
+        </a>
+        <a href="services.html" class="service-box">
+          <h3>Scholarship Assistance</h3>
+          <p>Form filling, document upload, and verification guidance.</p>
+        </a>
+        <a href="services.html" class="service-box">
+          <h3>Samagra & Aadhaar</h3>
+          <p>Linking and correcting student data accurately.</p>
+        </a>
+        <a href="services.html" class="service-box">
+          <h3>School Registration</h3>
+          <p>Support for school registration and timely renewals.</p>
+        </a>
+        <a href="services.html" class="service-box">
+          <h3>Technical Guidance</h3>
+          <p>Expert help for resolving portal-related issues.</p>
+        </a>
+        <a href="services.html" class="service-box">
+          <h3>CBSE Portal</h3>
+          <p>Help with LOC, registrations, and board updates.</p>
+        </a>
+        <a href="services.html" class="service-box">
+          <h3>OASIS Portal</h3>
+          <p>Manage school and staff data for OASIS accurately.</p>
+        </a>
+        <a href="services.html" class="service-box">
+          <h3>Saras 6.0</h3>
+          <p>End-to-end help with SARAS affiliation portal.</p>
+        </a>
+      </div>
     </div>
-  </div>
-</section>
-
+  </section>
 
   <footer>
-    <p>� 2025 Educonnect Solutions | Balaghat, MP</p>
+    <p>© 2025 Educonnect Solutions | Balaghat, MP</p>
   </footer>
 </body>
 </html>
