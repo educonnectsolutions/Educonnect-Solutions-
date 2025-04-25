@@ -3,62 +3,126 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inquiry Form - Educonnect Solutions</title>
+  <title>Educonnect Solutions - Home</title>
   <link rel="stylesheet" href="style.css" />
-   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      padding: 20px;
-      background-color: #f3f3f3;
-    }
+  <style>
+    /* Header layout */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000; /* Black background */
+    color: white;
+    flex-wrap: wrap;
+  }
 
-    form {
-      max-width: 600px;
-      margin: auto;
-      background: #fff;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
+  .left-header, .right-header {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
 
-    h2 {
-      text-align: center;
-      margin-bottom: 1rem;
-      color: #5e35b1;
-    }
+  .left-header a, .right-header a {
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+  }
 
-    label {
-      font-weight: bold;
+  .back-button {
+    background-color: #444;
+    color: white;
+  }
+
+  .login-button {
+    background-color: #4CAF50;
+    color: white;
+    margin-left: auto;
+  }
+
+  .logo-area {
+    text-align: center;
+    flex: 2;
+  }
+
+  .logo-area img {
+    height: 40px;
+    vertical-align: middle;
+  }
+
+  .logo-area h1 {
+    display: inline;
+    font-size: 20px;
+    margin-left: 10px;
+    color: white;
+  }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+  }
+
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 600px) {
+    .logo-area h1 {
       display: block;
-      margin-top: 1rem;
-      margin-bottom: 0.5rem;
+      margin-top: 5px;
     }
 
-    input, select, textarea {
-      width: 100%;
-      padding: 0.7rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1rem;
+    nav ul {
+      flex-direction: column;
+      align-items: center;
     }
 
-    button {
-      margin-top: 1.5rem;
-      width: 100%;
-      padding: 0.8rem;
-      background-color: #5e35b1;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      font-size: 1rem;
-      cursor: pointer;
+    .right-header {
+      justify-content: flex-end;
     }
+  }
+</style>
 
-    button:hover {
-      background-color: #4527a0;
-    }
-  </style>
 </head>
+<body>
+  <header>
+    <div class="left-header">
+      <a href="javascript:history.back()" class="back-button">← Back</a>
+    </div>
+
+    <div class="logo-area">
+      <img src="logo.png" alt="Logo" />
+      <h1>Educonnect Solutions</h1>
+    </div>
+
+    <div class="right-header">
+      <a href="login.html" class="login-button">Login</a>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="inquiry.html">Inquiry</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="agreement.html">Agreement</a></li>
+      </ul>
+    </nav>
+  </header>
 <body>
 <header><div class="logo-area">
 
