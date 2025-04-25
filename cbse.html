@@ -1,11 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CBSE Portal - Educonnect Solutions</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Educonnect Solutions - Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Header layout */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000; /* Black background */
+    color: white;
+    flex-wrap: wrap;
+  }
+
+  .left-header, .right-header {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .left-header a, .right-header a {
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+
+  .back-button {
+    background-color: #444;
+    color: white;
+  }
+
+  .login-button {
+    background-color: #4CAF50;
+    color: white;
+    margin-left: auto;
+  }
+
+  .logo-area {
+    text-align: center;
+    flex: 2;
+  }
+
+  .logo-area img {
+    height: 40px;
+    vertical-align: middle;
+  }
+
+  .logo-area h1 {
+    display: inline;
+    font-size: 20px;
+    margin-left: 10px;
+    color: white;
+  }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+  }
+
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 600px) {
+    .logo-area h1 {
+      display: block;
+      margin-top: 5px;
+    }
+
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .right-header {
+      justify-content: flex-end;
+    }
+  }
+</style>
+
 </head>
+<body>
+  <header>
+    <div class="left-header">
+      <a href="javascript:history.back()" class="back-button">← Back</a>
+    </div>
+
+    <div class="logo-area">
+      <img src="logo.png" alt="Logo" />
+      <h1>Educonnect Solutions</h1>
+    </div>
+
+    <div class="right-header">
+      <a href="login.html" class="login-button">Login</a>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="inquiry.html">Inquiry</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="agreement.html">Agreement</a></li>
+      </ul>
+    </nav>
+  </header>
 <body>
   <header>
     <div class="logo-area">
