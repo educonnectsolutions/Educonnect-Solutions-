@@ -2,165 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Admin Panel - EduConnect Solutions</title>
+  <title>Admin Panel - EduConnect</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .hidden { display: none; }
-    .btn {
-      background: #007bff;
-      color: white;
-      padding: 8px 14px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .btn:hover { background: #0056b3; }
-
-    .admin-box {
-      max-width: 500px;
-      margin: 60px auto;
-      background: #ffffff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-
-    input[type="text"], input[type="password"] {
-      width: 100%;
-      padding: 10px;
-      margin-top: 8px;
-      margin-bottom: 16px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
-
-    table, th, td {
-      border: 1px solid #ccc;
-      padding: 8px;
-    }
-
-    th {
-      background: #007bff;
-      color: white;
-    }
-
-    td {
-      background: #f9f9f9;
-    }
-
-    a { color: #007bff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-  </style>
 </head>
 <body>
-  <header>
-    <h1>EduConnect Solutions</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="agreement.html">Agreement</a>
-      <a href="admin.html" class="active">Admin</a>
-    </nav>
-  </header>
-
-  <main>
-    <div class="admin-box" id="loginBox">
-      <h2>Admin Login</h2>
-      <input type="text" id="username" placeholder="Username" />
-      <input type="password" id="password" placeholder="Password" />
-      <button class="btn" onclick="login()">Login</button>
-      <p id="errorMsg" style="color:red;"></p>
-      <p><a href="#" onclick="alert('Please contact: educonnectsolutions123@gmail.com for password reset'); return false;">Forgot Password?</a></p>
-    </div>
-
-    <div class="admin-box hidden" id="panelBox">
-      <h2>Welcome, Admin</h2>
-      <div style="text-align: right;">
-        <button onclick="togglePasswordBox()" style="background:#ffc107; color:#000;">Change Password</button>
-      </div>
-
-      <div id="changePassBox" style="display:none; margin-top:10px;">
-        <input type="password" id="oldPass" placeholder="Old Password" />
-        <input type="password" id="newPass" placeholder="New Password" />
-        <button class="btn" onclick="changePassword()">Update</button>
-        <p id="passMsg" style="color:green;"></p>
-      </div>
-
-      <h3>Agreement Requests</h3>
-      <table>
-        <tr>
-          <th>School Name</th>
-          <th>Amount</th>
-          <th>Status</th>
-          <th>Login Info</th>
-          <th>Action</th>
-        </tr>
-        <tr>
-          <td>Green Valley Public School</td>
-          <td>₹5000</td>
-          <td id="status1">Pending</td>
-          <td id="login1">-</td>
-          <td><button class="btn" onclick="approve(1)">Approve</button></td>
-        </tr>
-        <tr>
-          <td>Sunrise School</td>
-          <td>₹2500</td>
-          <td id="status2">Pending</td>
-          <td id="login2">-</td>
-          <td><button class="btn" onclick="approve(2)">Approve</button></td>
-        </tr>
-      </table>
-    </div>
+  <header><h2>Admin Dashboard</h2></header>
+  <main class="container">
+    <section class="admin-block">
+      <h3>Pending Agreements</h3>
+      <p>School Agreement requests will be listed here...</p>
+    </section>
+    <section class="admin-block">
+      <h3>Manage Users</h3>
+      <p>View, edit or delete school profiles...</p>
+    </section>
+    <section class="admin-block">
+      <h3>Update Payment Info</h3>
+      <p>Change QR code or bank details shown to schools.</p>
+    </section>
+    <a href="change-password.html" class="btn">Change Password</a>
   </main>
-
-  <footer>
-    <p>&copy; 2025 EduConnect Solutions | All rights reserved.</p>
-  </footer>
-
-  <script>
-    let currentPassword = "admin123";
-
-    function login() {
-      const user = document.getElementById("username").value;
-      const pass = document.getElementById("password").value;
-      if (user === "admin" && pass === currentPassword) {
-        document.getElementById("loginBox").classList.add("hidden");
-        document.getElementById("panelBox").classList.remove("hidden");
-      } else {
-        document.getElementById("errorMsg").innerText = "Invalid login details!";
-      }
-    }
-
-    function togglePasswordBox() {
-      const box = document.getElementById("changePassBox");
-      box.style.display = box.style.display === "none" ? "block" : "none";
-    }
-
-    function changePassword() {
-      const oldPass = document.getElementById("oldPass").value;
-      const newPass = document.getElementById("newPass").value;
-      const msg = document.getElementById("passMsg");
-
-      if (oldPass === currentPassword && newPass.trim() !== "") {
-        currentPassword = newPass;
-        msg.innerText = "Password updated successfully!";
-        msg.style.color = "green";
-      } else {
-        msg.innerText = "Incorrect old password or empty new password.";
-        msg.style.color = "red";
-      }
-    }
-
-    function approve(id) {
-      document.getElementById("status" + id).innerText = "Approved";
-      document.getElementById("login" + id).innerHTML = `<small>User ID:</small> SCH00${id}<br><small>Password:</small> 123456`;
-    }
-  </script>
 </body>
 </html>
